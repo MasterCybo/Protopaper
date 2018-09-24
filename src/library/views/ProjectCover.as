@@ -1,10 +1,10 @@
-package project.views
+package library.views
 {
 	import ru.aa.march.views.SpriteStarling;
 	
-	public class ProjectMenu extends SpriteStarling
+	public class ProjectCover extends SpriteStarling
 	{
-		public function ProjectMenu()
+		public function ProjectCover()
 		{
 			super();
 		}

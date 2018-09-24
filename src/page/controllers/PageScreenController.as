@@ -1,12 +1,12 @@
-package project.controllers
+package page.controllers
 {
 	import feathers.core.FeathersControl;
 	
 	import ru.aa.march.controllers.ControllerFeathers;
 	
-	public class ProjectViewController extends ControllerFeathers
+	public class PageScreenController extends ControllerFeathers
 	{
-		public function ProjectViewController(view:FeathersControl)
+		public function PageScreenController(view:FeathersControl)
 		{
 			super(view);
 		}

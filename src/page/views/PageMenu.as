@@ -1,12 +1,12 @@
-package screen.views
+package page.views
 {
 	import feathers.controls.Button;
 	
 	import ru.aa.march.views.SpriteStarling;
 	
-	public class ScreenMenu extends SpriteStarling
+	public class PageMenu extends SpriteStarling
 	{
-		public function ScreenMenu()
+		public function PageMenu()
 		{
 			super();
 		}

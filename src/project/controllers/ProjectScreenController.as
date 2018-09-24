@@ -1,12 +1,12 @@
-package screen.controllers
+package project.controllers
 {
 	import feathers.core.FeathersControl;
 	
 	import ru.aa.march.controllers.ControllerFeathers;
 	
-	public class ScreenViewController extends ControllerFeathers
+	public class ProjectScreenController extends ControllerFeathers
 	{
-		public function ScreenViewController(view:FeathersControl)
+		public function ProjectScreenController(view:FeathersControl)
 		{
 			super(view);
 		}
