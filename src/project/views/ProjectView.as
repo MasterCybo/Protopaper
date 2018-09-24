@@ -1,8 +1,8 @@
 package project.views
 {
-	import base.views.View;
+	import ru.aa.march.views.SpriteStarling;
 	
-	public class ProjectView extends View
+	public class ProjectView extends SpriteStarling
 	{
 		public function ProjectView()
 		{

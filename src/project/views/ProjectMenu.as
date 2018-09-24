@@ -1,22 +1,12 @@
 package project.views
 {
-	import base.views.View;
+	import ru.aa.march.views.SpriteStarling;
 	
-	public class ProjectMenu extends View
+	public class ProjectMenu extends SpriteStarling
 	{
 		public function ProjectMenu()
 		{
 			super();
-		}
-		
-		override public function show():void
-		{
-			super.show();
-		}
-		
-		override public function remove():void
-		{
-			super.remove();
 		}
 	}
 }

@@ -1,26 +1,21 @@
 package screen.views
 {
-	import base.views.View;
-	
 	import feathers.controls.Button;
 	
-	public class ScreenMenu extends View
+	import ru.aa.march.views.SpriteStarling;
+	
+	public class ScreenMenu extends SpriteStarling
 	{
 		public function ScreenMenu()
 		{
 			super();
 		}
 		
-		override public function show():void
+		override protected function init():void
 		{
 			var addButton:Button = new Button();
 			addButton.label = "Menu";
 			addChild(addButton);
-		}
-		
-		override public function remove():void
-		{
-			super.remove();
 		}
 	}
 }
