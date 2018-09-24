@@ -8,5 +8,15 @@ package project.views
 		{
 			super();
 		}
+		
+		override public function show():void
+		{
+			super.show();
+		}
+		
+		override public function remove():void
+		{
+			super.remove();
+		}
 	}
 }
