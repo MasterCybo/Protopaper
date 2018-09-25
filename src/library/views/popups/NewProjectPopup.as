@@ -14,6 +14,9 @@ package library.views.popups
 	
 	public class NewProjectPopup extends Panel
 	{
+		private var _acceptButton:Button;
+		private var _titleInput:TextInput;
+		
 		public function NewProjectPopup()
 		{
 			super();
@@ -24,17 +27,19 @@ package library.views.popups
 			super.initialize();
 			
 			title = "Create new Project";
+			
 			var verticalLayout:VerticalLayout = new VerticalLayout();
 			
 			var contentGroup:LayoutGroup = new LayoutGroup();
 			contentGroup.layout = verticalLayout;
 			addChild(contentGroup);
 			
-			var titleInput:TextInput = new TextInput();
-			titleInput.maxChars = 25;
-			titleInput.layoutData = new HorizontalLayoutData(100);
-			titleInput.setFocus();
-			contentGroup.addChild(titleInput);
+			_titleInput = new TextInput();
+			_titleInput.maxChars = 25;
+			_titleInput.layoutData = new HorizontalLayoutData(100);
+			_titleInput.setFocus();
+			_titleInput.addEventListener(Event.CHANGE, changeTitleHandler);
+			contentGroup.addChild(_titleInput);
 			
 			var horizontalLayout:HorizontalLayout = new HorizontalLayout();
 			var buttonsGroup:LayoutGroup = new LayoutGroup();
@@ -42,10 +47,11 @@ package library.views.popups
 			buttonsGroup.layout = horizontalLayout;
 			contentGroup.addChild(buttonsGroup);
 			
-			var acceptButton:Button = new Button();
-			acceptButton.label = "Accept";
-			acceptButton.addEventListener(Event.TRIGGERED, acceptHandler);
-			buttonsGroup.addChild(acceptButton);
+			_acceptButton = new Button();
+			_acceptButton.label = "Accept";
+			_acceptButton.addEventListener(Event.TRIGGERED, acceptHandler);
+			buttonsGroup.addChild(_acceptButton);
+			_acceptButton.isEnabled = false;
 			
 			var cancelButton:Button = new Button();
 			cancelButton.label = "Cancel";
@@ -54,6 +60,12 @@ package library.views.popups
 			
 			contentGroup.validate();
 			buttonsGroup.validate();
+		}
+		
+		private function changeTitleHandler(event:Event):void
+		{
+			var titleInput:TextInput = event.target as TextInput;
+			_acceptButton.isEnabled = titleInput.text !== "" && titleInput.text !== " ";
 		}
 		
 		private function acceptHandler(event:Event):void

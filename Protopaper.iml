@@ -2,7 +2,7 @@
 <module type="Flex" version="4">
   <component name="FlexBuildConfigurationManager" active="Protopaper">
     <configurations>
-      <configuration name="Protopaper" target-platform="Mobile" pure-as="true" main-class="Main" output-file="Protopaper.swf" output-folder="$MODULE_DIR$/out/production/Protopyte">
+      <configuration name="Protopaper" target-platform="Mobile" pure-as="true" main-class="Main" output-file="Protopaper.swf" output-folder="$MODULE_DIR$/out/production/Protopaper">
         <dependencies target-player="31.0">
           <entries>
             <entry library-name="libs" library-level="project">
